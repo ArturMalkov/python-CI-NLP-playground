@@ -12,6 +12,7 @@ lint:
 	pylint --disable=R,C *.py mylib/*.py  # disable recommended and configuration warnings
 test:
 	# test
+	pytest -vv --cov=mylib  # to indicate how much test coverage share inside mylib/ is
 build:
 	# build Docker container
 deploy:
