@@ -12,6 +12,8 @@ lint:
 	pylint --disable=R,C *.py mylib/*.py  # disable recommended and configuration warnings
 test:
 	# test
+build:
+	# build Docker container
 deploy:
 	# deploy
 all: install lint test deploy
