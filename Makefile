@@ -9,7 +9,7 @@ format:
 	black *.py mylib/*.py
 lint:
 	# flake8/pylint
-	pylint --disable=R,C *.py mylib/*.py  # disable recommended and configuration warnings
+	pylint --disable=R,C *.py mylib/*.py  # disable recommended and configuration warnings (too verbose for dev process)
 test:
 	# test
 	pytest -vv --cov=mylib  # to indicate how much test coverage share inside mylib/ is
