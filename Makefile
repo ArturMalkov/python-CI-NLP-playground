@@ -9,6 +9,7 @@ format:
 	black *.py mylib/*.py
 lint:
 	# flake8/pylint
+	pylint --disable=R,C *.py mylib/*.py  # disable recommended and configuration warnings
 test:
 	# test
 deploy:
