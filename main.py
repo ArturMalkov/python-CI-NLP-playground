@@ -26,5 +26,12 @@ def wiki(name: str):
     return {"result": result}
 
 
+@app.get("/phrase/{name}")
+def phrase(name: str):
+    """Retrieve Wikipedia page and return phrases"""
+    result = logic.phrases(name)
+    return {"result": result}
+
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
