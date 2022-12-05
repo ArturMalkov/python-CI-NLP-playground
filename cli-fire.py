@@ -6,4 +6,4 @@ from mylib import logic
 
 
 if __name__ == "__main__":
-    fire.Fire(logic.wiki)
+    fire.Fire(logic)
