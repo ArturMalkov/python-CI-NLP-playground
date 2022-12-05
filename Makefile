@@ -15,6 +15,10 @@ test:
 	pytest -vv --cov=mylib --cov=main  # to indicate how much test coverage share inside mylib/ and main.py is
 build:
 	# build Docker container
+	docker build -t fastapi-wiki-textblob .
+run:
+	# run Docker container
+	docker run -p 8000:8000 fastapi-wiki-textblob
 deploy:
 	# deploy
 all: install lint test deploy
