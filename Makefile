@@ -3,8 +3,9 @@
 install:
 	# install commands
 	pip install --upgrade pip && \
-		pip install -r requirements.txt && \
-			  python -m textblob.download_corpora
+		pip install -r requirements.txt &&
+post-install:
+	python -m textblob.download_corpora
 format:
 	# format code
 	black *.py mylib/*.py
@@ -26,5 +27,5 @@ deploy:
 	# docker build -t fastapi-wiki-textblob .
 	# docker tag fastapi-wiki-textblob:latest 32487234636548.dkr.ecr.us-east1.amazonaws.com/fastapi-wiki-textblob:latest
 	# docker push 32487234636548.dkr.ecr.us-east1.amazonaws.com/fastapi-wiki-textblob:latest
-all: install lint test deploy
+all: install post-install lint test deploy
 	# convention for the place where you can run every single command together
